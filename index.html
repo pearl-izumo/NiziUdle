@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+    <title>NiziUdle</title>
+    <link rel="icon" href="img/pearl.png">
+    <link rel="stylesheet" href="css/styles.css">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+</head>
+<body>
+  <div class="attention">ご使用の端末ではプレイすることができません。</div>
+  <div class="container">
+    <div class="title" id="title">
+      <div class="home" id="home">
+        <img src="img/home.png" width="25"></img>
+      </div>
+      <a>NiziUdle</a>
+      <div class="rotate" id="rotate">
+        <img src="img/left.png" width="25" id="rotate_img"></img>
+      </div>
+    </div>
+    <div class="center">
+      <div class="popup" id="popup">
+        <div class="close" id="close">×</div>
+        <div class="opening" id="opening">
+          <div class="rule" id="rule">
+            <p class="titlebox">Rule</p>
+            <p class="textbox">Play <a href="https://www.nytimes.com/games/wordle/index.html">Wordle</a> and</p>
+            <p class="textbox">think yourself.</p>
+            <p class="titlebox">Goal</p>
+            <p class="textbox">Make</p>
+            <div class="example" id="example"></div>
+            <p class="creator">Created by @pearl_izumo</p>
+          </div>
+        </div>
+        <div class="result" id="result">
+          <div class="result_niziu" id="result_niziu"></div>
+
+          <p class="textbox" id="result_text"></p>
+          <div class="example" id="result_box"></div>
+          <p class="titlebox">Keys</p>
+          <div class="result_keyboard" id="result_keyboard"></div>
+          <p class="textbox" id="retry">Retry ☞</p>
+          <p class="creator" id="creator2">Created by @pearl_izumo</p>
+        </div>
+      </div>
+      <div class="input" id="input">Choose any color</div>
+      <div class="output">
+        <div class="answer" id="ans1"></div>
+        <div class="answer" id="ans2"></div>
+        <div class="answer" id="ans3"></div>
+        <div class="answer" id="ans4"></div>
+        <div class="answer" id="ans5"></div>
+        <div class="answer" id="ans6"></div>
+        <div class="answer" id="ans7"></div>
+        <div class="answer" id="ans8"></div>
+        <div class="answer" id="ans9"></div>
+        <div class="answer" id="ans10">
+          <img src="img/mark.png" width="40" id="mark"></img>
+        </div>
+      </div>
+      <div class="keyboard" id="keyboard"></div>
+      <div class="fctkey">
+        <div class="enter" id="enter">Enter</div>
+        <div class="dlt" id="dlt">
+          <img src="img/dlt.png" width=100%></img>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <script src="js/main.js"></script>
+</body>
+</html>
