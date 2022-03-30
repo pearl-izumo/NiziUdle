@@ -148,7 +148,7 @@ div.container{
 }
 .textbox{text-align: center;}
 .creator{
-  text-align: center; margin-top: 85px;
+  text-align: center; margin-top: 80px;
   color: darkgray; font-size: 12px;
 }
 .example{
@@ -159,7 +159,7 @@ div.container{
 }
 #result_text{font-size: 22px; margin-top: 10px; margin-bottom: 15px;}
 #retry{font-size: 20px; margin-top: 30px; margin-bottom: 15px;}
-#creator2{margin-top: 45px;}
+#creator2{margin-top: 40px;}
 
 .result_keyboard{
   width: 200px;
