@@ -1,0 +1,192 @@
+body {
+  background: white;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+div.container{
+  width: 100%; height: 90%;
+  margin-top: 8%;
+  overflow-x: hidden;
+}
+
+.title{
+  width: 85%;
+  margin: 5px auto 5px auto;
+  display: flex; justify-content: space-between;
+  font-size: 30px; font-weight: bold;
+}
+
+.center{
+  width: 85%;
+  margin-left: auto; margin-right: auto;
+  align-items: center;
+  position: relative;
+}
+.input{
+  background: #dddddd; color: #333;
+  width: 100%; height: 70px;
+  margin: auto; border: 1px solid gray;
+  display: flex; align-items: center; justify-content: center;
+}
+.output{
+  width: 100%; height: 300px; 
+  display: flex; justify-content: space-between; flex-wrap: wrap;
+  margin: 5px auto 10px auto;
+}
+.answer{
+  width: 48%; height: 55px;
+  border: 1px solid darkgray;
+  display: flex; align-items: center; justify-content: center;
+}
+#ans1{background: #ff6a39;}
+#ans2{background: #71c5e8;}
+#ans3{background: #7f35b2;}
+#ans4{background: #f9e267;}
+#ans5{background: #ffffff;}
+#ans6{background: #00cfb4;}
+#ans7{background: #ba0c2f;}
+#ans8{background: #ecb3cb;}
+#ans9{background: #003da5;}
+#ans10{background: #222222;}
+
+
+.square1{
+  width: 21px; height: 19px;
+  padding-top: 2px;
+  border: 1px solid gray; text-align: center;
+  font-size: 15px; font-weight: bold;
+}
+.square2{
+  background: white;
+  width: 35px; height: 30px;
+  margin: 0 2px; padding-top: 5px;
+  border: 1px solid gray; text-align: center;
+  font-size: 22px; color: #555; font-weight: bold;
+}
+
+.keyboard{
+  width: 80%; margin: auto;
+  display: flex; flex-wrap: wrap; justify-content: space-around;
+}
+.key{
+  background: lightgray;
+  width: 18%; padding-top: 18%;
+  border-radius: 10%;
+}
+.key_num{
+  width: 18%; text-align: center;
+  font-size: small; font-weight: bolder; color: #555;
+}
+
+.rotate_right{animation: rotate-right 0.8s;}
+.rotate_left{animation: rotate-left 0.8s;}
+
+@keyframes rotate-right{
+  0% {transform: rotate(0);}
+  100% {transform: rotate(90deg);}
+}
+@keyframes rotate-left{
+  0% {transform: rotate(0);}
+  100% {transform: rotate(-90deg);}
+}
+
+.fctkey{
+  width: 80%; margin: auto;
+  margin-top: 5px; display: flex;
+  justify-content: space-between;
+}
+.enter{
+  background-color:lightgray;
+  width: 30%; padding: 3% 0;
+  text-align: center; color: #333;
+  border-radius: 10%;
+}
+.dlt{
+  width: 21%; align-items: center; display: flex;
+}
+
+.reject{animation: reject 0.4s;}
+@keyframes reject {
+  0% {transform: translateX(0);}
+  20% {transform: translateX(-3px);}
+  40% {transform: translateX(3px);}
+  60% {transform: translateX(-3px);}
+  80% {transform: translateX(3px);}
+  100% {transform: translateX(0);}
+}
+
+.ansturn{animation: ansturn 0.8s;}
+@keyframes ansturn{
+  0% {transform: rotateX(0);}
+  100% {transform: rotateX(180deg);}
+}
+
+.popup{
+  background-color: #fff;
+  position: fixed;
+  top: 100px; left: 0; right: 0;
+  width: 75%; height: 450px;
+  margin: auto;
+  border: solid 1px gray;
+  box-shadow: 0 0 0 9999px rgba(0, 0, 0, .6);
+}
+.close{
+  background-color: #222;
+  width: 12%; padding-top: 5px; padding-bottom: 7px; 
+  border: solid 2px #fff;
+  margin-right: 0; margin-left: auto;
+  color: white; font-size: 20px;
+  text-align: center;
+}
+
+.titlebox{
+  background-color: #222;
+  width: 20%; margin: auto; margin-top: 40px;
+  border: solid 2px #fff;
+  text-align: center;
+  color: white; font-size: 20px;
+}
+.textbox{text-align: center;}
+.creator{
+  text-align: center; margin-top: 85px;
+  color: darkgray; font-size: 12px;
+}
+.example{
+  display: flex; justify-content: center;
+}
+.result{
+  display: none;
+}
+#result_text{font-size: 22px; margin-top: 10px; margin-bottom: 15px;}
+#retry{font-size: 20px; margin-top: 30px; margin-bottom: 15px;}
+#creator2{margin-top: 45px;}
+
+.result_keyboard{
+  width: 200px;
+  display: flex; flex-wrap: wrap; justify-content: space-around;
+  margin: auto; margin-top: 15px;
+  font-size: 5px; color: #555;
+}
+.result_key{
+  background: lightgray;
+  width: 35px; height: 30px;
+  margin: 0 2px; padding-top: 5px;
+  border-radius: 10%;
+  text-align: center;
+  color: #333; font-size: 20px;
+}
+.attention{
+  margin-top: 30vh;
+  font-size: 3vw;
+  text-align: center;
+  display: none;
+}
+
+@media screen and (min-width: 481px){
+  .container {display: none;}
+  .attention{display: block;}
+}
+@media screen and (max-width: 359px){
+  .container {display: none;}
+  .attention{display: block;}
+}
