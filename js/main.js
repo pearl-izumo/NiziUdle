@@ -16,6 +16,7 @@
   let outcolor = [];
   let memo = [];
   let last = 0;
+  let lock = 0;
 
   window.onload = onLoad();
 
@@ -80,7 +81,7 @@
       if(i==9 && last==0){
         document.getElementById("ans10").classList.add("reject");
         setTimeout(function(){document.getElementById("ans10").classList.remove("reject")}, 600);
-      }else if(visit[i]==0){
+      }else if(visit[i]==0 && lock==0){
         input.style.backgroundColor = colorlist[i];
         create_input(i);
       }else{
@@ -135,6 +136,7 @@
         document.getElementById("popup").style.display = "block";
       },3600);
     }else if(before==0 && answer_now.length==namelist[selected].length){
+      lock = 1;
       ans_check(answer_now);
       for(let i=0; i<namelist[selected].length; i++){
         let input_i = document.getElementById("input"+selected+"_"+i);
@@ -155,6 +157,7 @@
           input.innerText = "Choose the last color";
           last = 1;
         };
+        lock = 0;
       },(namelist[selected].length)*720);
       before = 1;
       visit[selected] = 1;
